@@ -1,0 +1,552 @@
+/* Base reset */
+* {
+  box-sizing: border-box;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
+}
+
+
+body {
+  color: #222;
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo3S_BnbFLeagw4Kq2osfvXHCvoDAjdyQZvQ&s'); 
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+}
+
+img {
+  max-width: 100%;
+}
+
+.bolg-logo{
+  padding-right: 5px;
+}
+
+
+main {
+  padding: 10px;
+  max-width: 100%; /* 100% width for forms like login and register */
+  margin: 0 auto;
+}
+/* Add this to your CSS file */
+.post-page {
+  max-width: 800px; /* Limit the width of the post page */
+  margin: auto; /* Center the post page */
+  padding: 20px; /* Add some padding */
+}
+
+.image-view {
+  text-align: center; /* Center the image */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+.image-view img {
+  width: 100%; /* Make image full width of its container */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 500px; /* Limit the maximum height */
+  object-fit: cover; /* Ensure image covers the container without distortion */
+  border-radius: 8px; /* Optional: add rounded corners */
+}
+
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  align-items: center;
+  background-color: aliceblue;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+header a.logo {
+  font-weight: bold;
+  font-size: 1.8rem;
+  color:  rgb(15, 74, 250);;
+}
+
+header nav {
+  display: flex;
+  gap: 24px;
+}
+
+header nav a {
+  padding: 10px 15px;
+  background-color:  rgb(15, 74, 250);;
+  color: aliceblue;
+  border-radius: 20px;
+  transition: background-color 0.3s ease;
+}
+
+header nav a:hover {
+  background-color: green;
+}
+
+/* Post layout styling */
+.post {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center; /* Align content to the center */
+  margin-bottom: 30px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post .image {
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.post .image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Prevent cutting off the image */
+  border-radius: 5px;
+}
+
+.post .texts {
+  flex: 1;
+  padding-left: 20px;
+}
+
+.post .texts h2 {
+  font-size: 1.8rem;
+  margin: 0 0 10px;
+}
+
+.post .content-post {
+  margin-top: 10px;
+}
+
+.post .info {
+  display: flex;
+  gap: 10px;
+  font-size: 1rem;
+  color: #888;
+  margin: 10px 0;
+}
+
+.post .author-logo {
+  font-size: 24px;
+  color: yellow; /* Highlight the author logo in yellow */
+  margin-right: 5px;
+}
+
+.post .time-logo {
+  font-size: 24px;
+  color: green; /* Highlight the time logo in green */
+  margin-right: 5px;
+}
+
+.post .info a.author {
+  color: #333;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.post .info time {
+  color: #555;
+  display: flex;
+  align-items: center;
+}
+
+.post .summary {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* CreatePost and Form Styling */
+form.create-post, form.login, form.register {
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+form.create-post h1, form.login h1, form.register h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+form.create-post input, form.login input, form.register input,
+form.create-post textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form.create-post button, form.login button, form.register button {
+  padding: 10px 15px;
+  background-color:  rgb(15, 74, 250);;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+form.create-post button:hover, form.login button:hover, form.register button:hover {
+  background-color: green;
+}
+
+
+form.login, form.register {
+  max-width: 400px; /* Adjust as needed for your form width */
+  width: 100%;
+  margin: 50px auto; /* Centering the form */
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form.login input, form.register input, 
+form.login button, form.register button {
+  padding: 10px;
+  margin-bottom: 15px;
+  width: 100%;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+form.login button, form.register button {
+  background-color: rgb(15, 74, 250);
+  color: white;
+  font-size: 1.2rem;
+}
+
+form.login button:hover, form.register button:hover {
+  background-color: green;
+}
+
+/* Form container styling */
+form {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for input fields */
+form input[type="text"],
+form input[type="file"],
+form .quill-editor, /* Assuming the editor is wrapped in a class "quill-editor" */
+form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Text input fields */
+form input[type="text"] {
+  background-color: #fff;
+  font-family: 'Arial', sans-serif;
+}
+
+/* File input styling */
+form input[type="file"] {
+  font-size: 1rem;
+  padding: 8px;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+/* Styling for the Editor (assuming the class is 'quill-editor') */
+.quill-editor {
+  background-color: #fff;
+  min-height: 200px; /* Ensures enough space for content editing */
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+/* Button styling */
+form button {
+  background-color:  rgb(15, 74, 250);;
+  color: white;
+  font-size: 1.2rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+/* Button hover effect */
+form button:hover {
+  background-color: green;
+}
+
+/* Form label styling */
+form label {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  display: block;
+  color: #333;
+}
+
+/* Centering the form content */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Additional margin for the 'Create post' button */
+form button {
+  margin-top: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    padding: 15px;
+  }
+
+  form input,
+  form button {
+    font-size: 1rem;
+  }
+}
+
+
+
+/* Post Page Container */
+.post-page {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Post Title */
+.post-page h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Post Time */
+.post-page time {
+  display: block;
+  font-size: 1rem;
+  color: #999;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Author Details */
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.author-logo {
+  margin-right: 5px;
+  color: green; /* Make the admin icon green */
+}
+
+/* Edit Button Styling */
+.edit-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.edit-btn {
+  background-color:  rgb(15, 74, 250);;
+  color: white;
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.edit-btn .pen {
+  margin-right: 8px;
+  font-size: 1.2rem;
+}
+
+.edit-btn:hover {
+  background-color: darkgreen;
+}
+
+/* Image View Styling */
+.image-view {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.image-view img {
+  max-width: 800px;  
+  width: 400px; 
+  height: 400px;     
+  display: block;   
+  margin: 0 auto;   
+}
+
+
+/* Post Content */
+.post-page > div {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .post-page {
+    padding: 15px;
+  }
+
+  .post-page h1 {
+    font-size: 1.5rem;
+  }
+
+  .edit-btn {
+    font-size: 1rem;
+    padding: 8px 15px;
+  }
+
+  .image-view img {
+    width: 100%;
+  }
+}
+
+
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+  /* For the author and time section */
+  .info {
+    display: flex;
+    flex-direction: column; /* Stack the items vertically */
+    align-items: flex-start; /* Align to the start of the flex container */
+    gap: 5px; /* Adds a small gap between the author and time */
+  }
+
+  .author, .time {
+    display: block;
+    font-size: 1rem; /* Adjust the font size for mobile */
+  }
+  
+  /* Optional: Adjust padding/margins for better spacing */
+  .info .author-logo, .info .time-logo {
+    margin-bottom: 5px;
+  }
+}
+
+
+/* Media query for screens smaller than 768px (mobile) */
+@media (max-width: 768px) {
+  .post, .create-post {
+    display: flex;
+    flex-direction: column;   /* Stack the image and content vertically */
+    align-items: center;      /* Center the content */
+  }
+
+  .post .image, .create-post .image {
+    width: 100%;              /* Image container takes full width */
+    margin-bottom: 15px;       /* Add space below the image */
+  }
+
+  .post .image img, .create-post .image img {
+    width: 100%;              /* Image stretches to fit the container */
+    height: auto;             /* Maintain aspect ratio */
+    object-fit: contain;      /* Ensures no part of the image is cut off */
+    max-width: 100%;          /* Prevent image from exceeding container width */
+  }
+
+  /* Additional fallback for ensuring images are scaled down but not cropped */
+  .post .image img, .create-post .image img {
+    display: block;           /* Ensure no extra spaces around the image */
+    max-height: 300px;        /* Set a maximum height to prevent excessive size */
+  }
+}
+
+
+
+.like-section {
+  display: flex;
+  align-items: center;
+}
+
+.like-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-right: 8px;
+}
+
+.heart-icon {
+  font-size: 24px;
+  color: #e0245e; /* Typical heart color */
+}
+
+.heart-icon.filled {
+  color: #e0245e; /* Filled heart color */
+}
+
+.heart-icon.outline {
+  color: #ccc; /* Outline heart color */
+}
+
+.likes-count {
+  font-size: 16px;
+  color: #333;
+}
+
+
